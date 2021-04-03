@@ -2,14 +2,24 @@ import { useState, useEffect } from 'react'
 import { fetchWeather } from './api/fetchWeather'
 
 const App = () => {
+
   const [city, setCity] = useState('')
   const [weather, setWeather] = useState({})
   const [isPending, setIsPending] = useState(true)
 
+  function cleanData(data) {
+    return {
+      cityName: data.name,
+      country: data.sys.country,
+      temp: parseInt(data.main.temp, 10),
+      description: data.weather[0].description
+    }
+  }
+
   useEffect(() => {
     setTimeout(async () => {
       const data = await fetchWeather('Oslo')
-      setWeather(data)
+      setWeather(cleanData(data))
       setIsPending(false)
     }, 1000)
   }, [])
@@ -19,8 +29,7 @@ const App = () => {
     if (e.key === 'Enter') {
       try {
         const data = await fetchWeather(city)
-        console.log(data)
-        setWeather(data)
+        setWeather(cleanData(data))
         setCity('')
       } catch (e) { console.log(e) }
     }
@@ -43,14 +52,14 @@ const App = () => {
             <div className="loader__center"></div>
           </div>
         ) : '' }
-        { weather.main ? (
+        { weather.cityName ? (
           <>
             <div className="content__city">
-              <p className="city-name">{ weather.name }</p>
-              <span className="city-label">{ weather.sys.country }</span>
+              <p className="city-name">{ weather.cityName }</p>
+              <span className="city-label">{ weather.country }</span>
             </div>
-            <h3 className="city-temp">{ parseInt(weather.main.temp, 10) }</h3>
-            <p className="city-weather-description">{ weather.weather[0].description }</p>
+            <h3 className="city-temp">{ parseInt(weather.temp, 10) }</h3>
+            <p className="city-weather-description">{ weather.description }</p>
           </>
         ) : '' }
       </div>
