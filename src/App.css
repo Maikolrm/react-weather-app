@@ -1,10 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+
 *{
   margin: 0;
   padding: 0;
   border: none;
+  outline: none;
   background: none;
   box-sizing: border-box;
   position: relative;
   list-style: none;
   text-decoration: none
 }
+
+:root {
+  --glass-bg: rgba(255, 255, 255, .3);
+  --glass-bg-1: rgba(255, 255, 255, .9);
+  --padding: 8px;
+  --field-height: 40px;
+  --border-rd: 2px
+}
+
+span, a { display: inline-block }
+
+input, img { display: block; width: 100% }
+
+/* ROOT */
+#root {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .2)), url('./weather-bg.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* MAIN */
+.main {
+  width: 90%;
+  max-width: 350px;
+  min-height: 400px;
+  background: var(--glass-bg);
+  padding: var(--padding);
+  border-radius: var(--border-rd);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .2), 0 4px 8px rgba(0, 0, 0, .4);
+  display: flex;
+  flex-direction: column
+}
+
+/* MAIN ELEMENT */
+.main__element {
+  background: var(--glass-bg-1)
+}
+
+/* SEARCH BOX */
+.main__search-box {
+  height: var(--field-height);
+  padding: 0 var(--padding);
+  border-radius: var(--border-rd);
+  font: 600 14px Quicksand;
+  color: grey;
+  line-height: var(--field-height)
+}
+
+/* CONTENT */
+.main__content {
+  flex: 1;
+  margin-top: var(--padding);
+  border-radius: var(--border-rd);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center
+}
+
+/* CITY NAME */
+.city-name { font: 700 14px Quicksand; color: grey }
+
+/* CITY LABEL */
+.city-label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  transform: translate(100%, -100%);
+  border-radius: 2px;
+  /* background: #ff8c00; */
+  background: orangered;
+  padding: 3px 5px;
+  color: #fff;
+  font: 700 12px Quicksand;
+  text-transform: uppercase
+}
+
+/* CITY TEMP */
+.city-temp { font: 700 130px Quicksand; color: grey; line-height: 1 }
+
+/* CITY WEATHER DESCRIPTION */
+.city-weather-description { font: 600 12px Quicksand; text-transform: uppercase; color: grey }
