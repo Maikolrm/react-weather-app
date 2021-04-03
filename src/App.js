@@ -25,8 +25,8 @@ const App = () => {
   }, [])
 
   const search = async (e) =>{
-    if (city.trim() === '') return
     if (e.key === 'Enter') {
+      if (city.trim() === '') return
       try {
         const data = await fetchWeather(city)
         setWeather(cleanData(data))
