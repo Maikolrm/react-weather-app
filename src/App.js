@@ -58,7 +58,7 @@ const App = () => {
               <p className="city-name">{ weather.cityName }</p>
               <span className="city-label">{ weather.country }</span>
             </div>
-            <h3 className="city-temp">{ parseInt(weather.temp, 10) }</h3>
+            <h3 className="city-temp">{ weather.temp }</h3>
             <p className="city-weather-description">{ weather.description }</p>
           </>
         ) : '' }
