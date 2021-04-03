@@ -84,12 +84,14 @@ input, img { display: block; width: 100% }
   right: 0;
   z-index: 1;
   transform: translate(100%, -100%);
+  width: 25px;
   border-radius: 2px;
   /* background: #ff8c00; */
   background: orangered;
-  padding: 3px 5px;
+  padding: 3px 0;
+  font: 700 9px Quicksand;
   color: #fff;
-  font: 700 12px Quicksand;
+  text-align: center;
   text-transform: uppercase
 }
 
@@ -97,4 +99,31 @@ input, img { display: block; width: 100% }
 .city-temp { font: 700 130px Quicksand; color: grey; line-height: 1 }
 
 /* CITY WEATHER DESCRIPTION */
-.city-weather-description { font: 600 12px Quicksand; text-transform: uppercase; color: grey }
+.city-weather-description { font: 700 12px Quicksand; text-transform: uppercase; color: grey }
+
+/* LOADEER */
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+/* LOADER CENTER */
+.loader__center {
+  width: 40px;
+  height: 40px;
+  border: 3px solid transparent;
+  border-bottom-color: steelblue;
+  border-top-color: steelblue;
+  border-radius: 50%;
+  animation: spin .5s linear infinite
+}
+
+/* ANIMATION */
+@keyframes spin { to { transform: rotateZ(360deg) } }
