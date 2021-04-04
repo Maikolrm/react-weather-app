@@ -55,11 +55,14 @@ const App = () => {
         { weather.cityName ? (
           <>
             <div className="content__city">
-              <p className="city-name">{ weather.cityName }</p>
-              <span className="city-label">{ weather.country }</span>
+            <span className="city__city-label">{ weather.country }</span>
+              <p className="city__city-name">{ weather.cityName }</p>
             </div>
-            <h3 className="city-temp">{ weather.temp }</h3>
-            <p className="city-weather-description">{ weather.description }</p>
+            <div className="content__temp">
+              <span className="temp__deg"></span>
+              <h3 className="temp__city-temp">{ weather.temp }</h3>
+            </div>
+            <p className="content__weather-description">{ weather.description }</p>
           </>
         ) : '' }
       </div>
