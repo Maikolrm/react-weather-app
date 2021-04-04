@@ -75,10 +75,10 @@ input, img { display: block; width: 100% }
 }
 
 /* CITY NAME */
-.city-name { font: 700 14px Quicksand; color: grey }
+.city__city-name { font: 700 14px Quicksand; color: grey }
 
 /* CITY LABEL */
-.city-label {
+.city__city-label {
   position: absolute;
   top: 0;
   right: 0;
@@ -95,11 +95,23 @@ input, img { display: block; width: 100% }
   text-transform: uppercase
 }
 
-/* CITY TEMP */
-.city-temp { font: 700 130px Quicksand; color: grey; line-height: 1 }
+/* CITY TEMPERTURE */
+.temp__city-temp { font: 700 150px Quicksand; color: grey; line-height: 1 }
+
+/* TEMPERTURE DEG SYMBOL */
+.temp__deg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 15px;
+  height: 15px;
+  border: 4px solid grey;
+  border-radius: 50%;
+}
 
 /* CITY WEATHER DESCRIPTION */
-.city-weather-description { font: 700 12px Quicksand; text-transform: uppercase; color: grey }
+.content__weather-description { font: 700 12px Quicksand; text-transform: uppercase; color: grey }
 
 /* LOADEER */
 .loader {
