@@ -75,7 +75,7 @@ input, img { display: block; width: 100% }
 }
 
 /* CITY NAME */
-.city__city-name { font: 700 14px Quicksand; color: grey }
+.city__city-name { padding-bottom: var(--padding); font: 700 14px Quicksand; color: grey }
 
 /* CITY LABEL */
 .city__city-label {
