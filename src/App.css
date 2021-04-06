@@ -27,6 +27,7 @@ input, img { display: block; width: 100% }
 /* ROOT */
 #root {
   height: 100vh;
+  min-height: 600px;
   background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .2)), url('./weather-bg.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
