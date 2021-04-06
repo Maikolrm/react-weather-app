@@ -6,6 +6,7 @@ const App = () => {
   const [city, setCity] = useState('')
   const [weather, setWeather] = useState({})
   const [isPending, setIsPending] = useState(true)
+  const [error, setError] = useState(null)
 
   function cleanData(data) {
     return {
@@ -18,7 +19,7 @@ const App = () => {
 
   useEffect(() => {
     setTimeout(async () => {
-      const data = await fetchWeather('Oslo')
+      const data = await fetchWeather('Auckland')
       setWeather(cleanData(data))
       setIsPending(false)
     }, 1000)
@@ -29,9 +30,12 @@ const App = () => {
       if (city.trim() === '') return
       try {
         const data = await fetchWeather(city)
-        setWeather(cleanData(data))
-        setCity('')
-      } catch (e) { console.log(e) }
+        if (data.weather) {
+          setWeather(cleanData(data))
+          setError(null)
+        } else { setError(true) }
+      } catch (e) { setError(true) }
+      setCity('')
     }
   }
 
@@ -40,7 +44,7 @@ const App = () => {
       <input
         className="main__element main__search-box"
         name="weather"
-        placeholder="Buscar...."
+        placeholder="Search city"
         value={city}
         onChange={e => setCity(e.target.value)}
         onKeyPress={search}
@@ -52,7 +56,8 @@ const App = () => {
             <div className="loader__center"></div>
           </div>
         ) : '' }
-        { weather.cityName ? (
+        { error ? <h3 className="content__no-results">Ops... try again!</h3> : '' }
+        { !error && weather.cityName ? (
           <>
             <div className="content__city">
             <span className="city__city-label">{ weather.country }</span>
