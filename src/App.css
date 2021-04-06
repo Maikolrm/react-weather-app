@@ -74,6 +74,9 @@ input, img { display: block; width: 100% }
   justify-content: center
 }
 
+/* CONTENT - NO RESULTS */
+.content__no-results { font: 600 16px Quicksand; color: grey }
+
 /* CITY NAME */
 .city__city-name { padding-bottom: var(--padding); font: 700 14px Quicksand; color: grey }
 
