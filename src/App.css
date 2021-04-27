@@ -13,7 +13,7 @@
 }
 
 :root {
-  --glass-bg: rgba(255, 255, 255, .3);
+  --glass-bg: rgba(255, 255, 255, .15);
   --glass-bg-1: rgba(255, 255, 255, .9);
   --padding: 8px;
   --field-height: 40px;
@@ -28,7 +28,7 @@ input, img { display: block; width: 100% }
 #root {
   height: 100vh;
   min-height: 600px;
-  background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .2)), url('./weather-bg.jpeg');
+  background: linear-gradient(rgba(0, 0, 0, .08), rgba(0, 0, 0, .02)), url('./weather-bg.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -44,7 +44,7 @@ input, img { display: block; width: 100% }
   background: var(--glass-bg);
   padding: var(--padding);
   border-radius: var(--border-rd);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, .2), 0 4px 8px rgba(0, 0, 0, .4);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .2), 0 4px 8px rgba(0, 0, 0, .5);
   display: flex;
   flex-direction: column
 }
