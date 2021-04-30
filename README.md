@@ -7,3 +7,5 @@
 Simple, beautiful and responsive.
 
 In this app you can get the current weather of a city typing its name.
+
+[Live Site](https://pwd-weather-app.netlify.app/)
