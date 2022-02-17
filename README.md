@@ -1,11 +1,24 @@
-# Weather App
+### React Weather App
 
-![Weather App Screenshot](https://i.ibb.co/R2PhwVQ/weather-poster.jpg)
+### What this app can do?
 
-## About this app:
+- Fetch the current weather for a given citie
 
-Simple, beautiful and responsive.
+## Features
 
-In this app you can get the current weather of a city typing its name.
+- Simple and beautiful
+- Responsive
 
-[Live Site](https://pwd-weather-app.netlify.app/)
+## Technologies
+
+- HTML5
+- CSS3
+- JavaScrtipt
+- NodeJS
+- React
+
+## Screenshots
+
+![Weather App](https://ik.imagekit.io/of8sk3s88sie/portfolio/weather-poster.jpg?ik-sdk-version=react-1.1.0)
+
+[Live Site](https://hm-weather-app-1.netlify.app)
