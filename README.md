@@ -1,15 +1,15 @@
 ## React Weather App
 
-What this app can do?
+#### What this app can do?
 
 - Fetch the current weather for a given citie
 
-### Features
+#### Features
 
 - Simple and beautiful
 - Responsive
 
-### Technologies
+#### Technologies
 
 - HTML5
 - CSS3
@@ -17,7 +17,7 @@ What this app can do?
 - NodeJS
 - React
 
-### Screenshots
+#### Screenshots
 
 ![Weather App](https://ik.imagekit.io/of8sk3s88sie/portfolio/weather-poster.jpg?ik-sdk-version=react-1.1.0)
 
