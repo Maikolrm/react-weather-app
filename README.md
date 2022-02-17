@@ -15,7 +15,7 @@
 - CSS3
 - JavaScrtipt
 - NodeJS
-- React
+- ReactJS
 
 #### Screenshots
 
